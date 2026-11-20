@@ -9,10 +9,25 @@
 //     console.log ("Sorry, you're not old enough to rent")
 // }
 
-function formatFullName(firstName, lastName) {
-    if (!firstName || !lastName) {
-        return "Invalid name input";
+
+
+function formatFullName (firstName, lastName) {
+    if(!firstName || !lastName) {
+        return "Invalid name input,";
     }
 
-    return `${lastName}, ${firstName}`;
+firstName = firstName.trim();
+lastName = lastName.trm();
+
+if(!firstName || !lastName) {
+        return "Invalid name input,";
+    }
+// let name = "john";
+// // console.log(name.toUpperCase());
+
+firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+return lastName + ", " + firstName;
 }
+
+console.log(formatFullName("JOHN","SMITH"));
