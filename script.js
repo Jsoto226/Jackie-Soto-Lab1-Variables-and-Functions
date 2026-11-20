@@ -9,7 +9,7 @@
 //     console.log ("Sorry, you're not old enough to rent")
 // }
 
-
+// Task 1
 
 function formatFullName (firstName, lastName) {
     if(!firstName || !lastName) {
@@ -32,6 +32,8 @@ return lastName + ", " + firstName;
 
 // console.log(formatFullName("JOHN","SMITH"));
 
+// Task 2
+
 function calculateTotalCost(price, quantity, taxRate) {
 if (!Number.isFinite(price) ||
     !Number.isFinite(quantity) ||
@@ -47,3 +49,21 @@ return totalCost;
 
 // console.log(calculateTotalCost (10, 2, 0.07));
 // console.log(calculateTotalCost (16, 5, 0.09));
+
+// Task 3
+
+function checkEligibility(age, isEmployed){
+    if (age <= 18) {
+        return "Not eligible";
+    } 
+    else if (isEmployed === true) {
+        return "Eligible";
+    }
+    else {
+        return "Conditionally eligible";
+    }
+}
+console.log(checkEligibility (17, true));
+console.log(checkEligibility (26, true));
+console.log(checkEligibility (23, false));
+
