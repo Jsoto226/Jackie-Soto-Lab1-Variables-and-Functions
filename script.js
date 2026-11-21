@@ -11,23 +11,24 @@
 
 // Task 1
 
-function formatFullName (firstName, lastName) {
-    if(!firstName || !lastName) {
-        return "Invalid name input.";
-    }
+function formatFullName(firstName, lastName) {
+  if (!firstName || !lastName) {
+    return "Invalid name input.";
+  }
 
-firstName = firstName.trim();
-lastName = lastName.trim();
+  firstName = firstName.trim();
+  lastName = lastName.trim();
 
-if(!firstName || !lastName) {
-        return "Invalid name input.";
-    }
-// let name = "john";
-// // console.log(name.toUpperCase());
+  if (!firstName || !lastName) {
+    return "Invalid name input.";
+  }
+  // let name = "john";
+  // // console.log(name.toUpperCase());
 
-firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
-lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
-return lastName + ", " + firstName;
+  firstName =
+    firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase();
+  lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+  return lastName + ", " + firstName;
 }
 
 // console.log(formatFullName("JOHN","SMITH"));
@@ -35,16 +36,17 @@ return lastName + ", " + firstName;
 // Task 2
 
 function calculateTotalCost(price, quantity, taxRate) {
-if (!Number.isFinite(price) ||
+  if (
+    !Number.isFinite(price) ||
     !Number.isFinite(quantity) ||
-    !Number.isFinite(taxRate)) {
+    !Number.isFinite(taxRate)
+  ) {
     return "Invalid input.";
-}
+  }
 
-let totalCost = (price * quantity) * (1 + taxRate);
+  let totalCost = price * quantity * (1 + taxRate);
 
-return totalCost;
-
+  return totalCost;
 }
 
 // console.log(calculateTotalCost (10, 2, 0.07));
@@ -52,18 +54,33 @@ return totalCost;
 
 // Task 3
 
-function checkEligibility(age, isEmployed){
-    if (age <= 18) {
-        return "Not eligible";
-    } 
-    else if (isEmployed === true) {
-        return "Eligible";
-    }
-    else {
-        return "Conditionally eligible";
-    }
+function checkEligibility(age, isEmployed) {
+  if (age <= 18) {
+    return "Not eligible";
+  } else if (isEmployed === true) {
+    return "Eligible";
+  } else {
+    return "Conditionally eligible";
+  }
 }
-console.log(checkEligibility(17, true));
-console.log(checkEligibility(26, true));
-console.log(checkEligibility(23, false));
+// console.log(checkEligibility(17, true));
+// console.log(checkEligibility(26, true));
+// console.log(checkEligibility(23, false));
 
+// Task 4
+// I am doubting myself on line 73-76 the fuctions are working, but part of me feels like
+// I need to add the same command as 38-45 from Task 2
+
+function calculateTotalCost(price, quantity, taxRate, discount) {
+  if (discount === undefined) {
+    discount = 0;
+  }
+
+  let discountedPrice = price * quantity * (1 - discount);
+  let totalCost = discountedPrice * (1 + taxRate);
+  return totalCost;
+}
+
+console.log(calculateTotalCost(10, 2, 0.07));
+console.log(calculateTotalCost(22, 6, 0.1));
+console.log(calculateTotalCost(5, 2, 0.14));
