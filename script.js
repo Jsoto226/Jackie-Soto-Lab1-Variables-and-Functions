@@ -1,4 +1,4 @@
-// Pauls After Office Hours Code for step 1
+// Pauls After Office Hours Code for task 1
 // // Conditions to renting a car
 // Establish Variables
 // let age = 30;
