@@ -63,7 +63,7 @@ function checkEligibility(age, isEmployed){
         return "Conditionally eligible";
     }
 }
-console.log(checkEligibility (17, true));
-console.log(checkEligibility (26, true));
-console.log(checkEligibility (23, false));
+console.log(checkEligibility(17, true));
+console.log(checkEligibility(26, true));
+console.log(checkEligibility(23, false));
 
